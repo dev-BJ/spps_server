@@ -127,7 +127,7 @@ async def login(data: LoginModel, resp: Response):
     if not data.user_id or not data.password:
         return {"error": "Matric number and password are required."}
 
-    query = select(Users).where(Users.c.user_id == data.user_id)
+    query = select(Users).where(Users.c.user_id == data.user_id.lower())
     result = None
     with _db.connect() as conn:
         result = conn.execute(query)
