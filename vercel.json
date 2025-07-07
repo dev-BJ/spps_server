@@ -4,23 +4,5 @@
             "source": "/(.*)",
             "destination": "api"
         }
-    ],
-    "functions":{
-        "app/**/*":{
-            "excludeFiles": [
-                "ml/*",
-                "db/create_db.py",
-                "db/test.py",
-                "misc/*"
-            ]
-        },
-        "*":{
-            "excludeFiles": [
-                "pyproject.toml",
-                "start_db.sh",
-                "uv.lock",
-                "README.md"
-            ]
-        }
-    }
+    ]
 }
