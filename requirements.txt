@@ -20,7 +20,7 @@ joblib==1.5.1
 markdown-it-py==3.0.0
 markupsafe==3.0.2
 mdurl==0.1.2
-mysqlclient==2.2.7
+# mysqlclient==2.2.7
 numpy==2.2.6
 openai==1.82.0
 pandas==2.2.3
