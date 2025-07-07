@@ -9,7 +9,7 @@ load_dotenv()
 
 DEV_MODE = os.getenv("DEV_MODE", "False").lower() in ("true", "1", "t")
 DEV_DB_URL = os.getenv("DEV_DB_URL", "postgresql://root:root@localhost:5432/spps_db")
-PRODUCTION_DB_URL = os.getenv("PRODUCTION_DB_URL", "postgres://neon_db:root@localhost:5432/neon_db")
+PRODUCTION_DB_URL = os.getenv("PRODUCTION_DB_URL", "postgresql://neondb_owner:npg_FTvZi7Rj5GOA@ep-late-art-a8iobjgv.eastus2.azure.neon.tech/spps_db?sslmode=require&channel_binding=require")
 
 _db = None
 

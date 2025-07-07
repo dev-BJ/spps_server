@@ -34,7 +34,7 @@ openai = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World from SPPS Server!"}
 
 def clean_recommendation(text: str) -> str:
     # Remove all asterisks
@@ -157,12 +157,18 @@ async def login(data: LoginModel, resp: Response):
 async def get_courses(user_id: str):
     if(not user_id):
         return {"error": "User ID is required."}
+    
     query = select(Courses). where(Courses.c.lecturer_id == user_id)
     result = None
+    
     with _db.connect() as conn:
         result = conn.execute(query)
         conn.commit()
+
     courses = result.mappings().all()
+
+    if not courses:
+        return {"courses": []}
 
     return {"courses": [dict(course) for course in courses]}
 
