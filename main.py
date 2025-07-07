@@ -21,7 +21,8 @@ origins = [
     "http://localhost:3000",
     "http://localhost:8000",
     "https://spps-v0.vercel.app",
-    "https://spps-server.vercel.app"
+    "https://spps-server.vercel.app",
+    "https://sppsserver-production.up.railway.app"
 ]
 
 app.add_middleware(
