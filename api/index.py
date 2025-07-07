@@ -20,6 +20,8 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://spps-v0.vercel.app",
+    "https://spps-server.vercel.app"
 ]
 
 app.add_middleware(
