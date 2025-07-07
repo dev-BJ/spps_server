@@ -26,7 +26,7 @@ def model():
     lr =  RandomForestRegressor(n_estimators=100, random_state=42)
     lr.fit(X_train, y_train)
 
-    with open('../api/results.pkl', 'wb') as f:
+    with open('../../api/results.pkl', 'wb') as f:
         pl.dump(lr, f)
 
     y_pred = lr.predict(X_test)
